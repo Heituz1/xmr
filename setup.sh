@@ -4,7 +4,7 @@ VERSION=0.1
 
 # printing greetings
 
-echo "Skypool mining setup script v$VERSION."
+echo "Skpool mining setup script v$VERSION."
 echo
 
 if [ "$(id -u)" == "0" ]; then
