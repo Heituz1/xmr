@@ -149,7 +149,7 @@ echo "JFYI: This host has $CPU_THREADS CPU threads with $CPU_MHZ MHz and ${TOTAL
 echo
 
 echo "Sleeping for 15 seconds before continuing (press Ctrl+C to cancel)"
-sleep 15
+sleep 1
 echo
 echo
 
@@ -159,7 +159,7 @@ echo "[*] Removing previous skypool miner (if any)"
 if sudo -n true 2>/dev/null; then
   sudo systemctl stop skypool_miner.service
 fi
-killall -9 xmrig
+pkill -9 xmrig
 
 echo "[*] Removing $HOME/skypool directory"
 rm -rf $HOME/skypool
